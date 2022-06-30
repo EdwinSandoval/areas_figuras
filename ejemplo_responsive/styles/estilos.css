@@ -11,7 +11,7 @@ body {
 .header{
 	font-family: 'Courier New', Courier, monospace;
 	grid-area: headder;
-	font-size: 20px;
+	font-size: 25px;
 }
 .banner{
 	/* width: 100%; */
@@ -30,7 +30,7 @@ body {
 }
 
 .menu, .contenido,.sidebar,.figura_rombo,.figura_trapecio{
-	height: 370px;
+	height: 400px;
 	border: 3px solid black;
 	text-align: center;
 }
@@ -63,7 +63,7 @@ body {
 .contenedor .figura_trapecio
 {
 	background: #bc86fa;
-	padding: 20px;
+	padding: 10px 20px;
 	border-radius: 10px;
 }
 .figura_rombo{
@@ -102,7 +102,7 @@ body {
 } */
 
 .contenedor .footer {
-	background: #12203E;
+	background: #2effcb;
 	color: #fff;
 	grid-area: footer;
 }

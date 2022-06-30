@@ -9,44 +9,17 @@ function general_triangulos() {
     const input4=document.getElementById("altura")//busca el id para hacer referencia a ese id
     const value4=Number( input4.value);
     
-    // const boton_area = document.querySelector("#btncalculaarea");
-    // boton_area.addEventListener("click", function(evento){
-	// // Aquí todo el código que se ejecuta cuando se da click al botón
-	//     const area=areatriangulo(value3,value4)
-    //     const result=document.getElementById("idtriangulo")
-    //     result.innerText=("El area del triangulo es: "+area)
-    // });
- 
-    // const boton_peri = document.querySelector("#btncalculaperi");
-    // boton_peri.addEventListener("click", function(evento){
-	// // Aquí todo el código que se ejecuta cuando se da click al botón
-    //     const peri=peritriangulo(value1,value2,value3)
-    //     const result=document.getElementById("idtriangulo")
-    //     result.innerText=("El perimetro del triangulo es: "+peri)
-    // });
-//----------------------------------------------------------------------------
-    // document.getElementById('radio1').checked
-    // alert('hola jajaj')
-    // if ( document.getElementById('btncalculaarea').onclick) {
     if ( document.getElementById('radio1').checked) {
         const area=areatriangulo(value3,value4)
         const result=document.getElementById("idtriangulo")
         result.innerText=("El area del triangulo es: "+area)
-        alert('ooskss')
+        // alert('ooskss')
     }else{
         const peri=peritriangulo(value1,value2,value3)
             const result2=document.getElementById("idtriangulo")
             result2.innerText=("El perimetro del triangulo es: "+peri)
-    }
-    // }
-        // if ( document.getElementById('btncalculaperi').onclick) {
-        //     const peri=peritriangulo(value1,value2,value3)
-        //     const result=document.getElementById("idtriangulo")
-        //     result.innerText=("El perimetro del triangulo es: "+peri)
-        // }
-    
+    } 
 }
-
 
 function perimetro_cuadra(){
     const input=document.getElementById("cuadrado")//busca el id para hacer referencia a ese id
@@ -65,28 +38,6 @@ function area_cuadra(){
     const resultado=document.getElementById("idarea2")
     resultado.innerText=("El area del cuadrado es: "+area)//resultado.innertext para escribir en una etiqueta p
 }
-function perimetro_triangulo() {
-    const input1=document.getElementById("lado1")//busca el id para hacer referencia a ese id
-    const value1=Number( input1.value)
-    const input2=document.getElementById("lado2")//busca el id para hacer referencia a ese id
-    const value2=Number( input2.value)
-    const input3=document.getElementById("base")//busca el id para hacer referencia a ese id
-    const value3=Number( input3.value)
-    const peri=peritriangulo(value1,value2,value3)
-    // alert(peri)
-    const result=document.getElementById("idtriangulo")
-    result.innerText=("El perimetro del triangulo es: "+peri)
-}
-function area_triangulo() {
-    const input1=document.getElementById("altura")//busca el id para hacer referencia a ese id
-    const value1=Number( input1.value)
-    const input3=document.getElementById("base")//busca el id para hacer referencia a ese id
-    const value3=Number( input3.value)
-    const area=areatriangulo(value3,value1)
-
-    const result=document.getElementById("idtriangulo")
-    result.innerText=("El area del triangulo es: "+area)
-}
 
 function area_circulo() {
     const input=document.getElementById("circulo")//busca el id para hacer referencia a ese id
@@ -104,19 +55,50 @@ function peri_circulo() {
     const result=document.getElementById("idcirculo")
     result.innerText=("El perimetro del circulo es: "+peri)
 }
-function area_rombo() {
-    const input1=document.getElementById("rombo2")//busca el id para hacer referencia a ese id
+
+function general_rombo() {
+    const input1=document.getElementById("rombo1")//busca el id para hacer referencia a ese id
     const value1=Number( input1.value)
-    const input2=document.getElementById("rombo3")//busca el id para hacer referencia a ese id
+    const input2=document.getElementById("rombo2")//busca el id para hacer referencia a ese id
     const value2=Number( input2.value)
-   
-    const peri=arearombo(value1,value2)
-    // alert(peri)
-    const result=document.getElementById("idresrombo")
-    result.innerText=("El perimetro del triangulo es: "+peri)
+    const input3=document.getElementById("rombo3")//busca el id para hacer referencia a ese id
+    const value3=Number( input3.value)
+    
+    if ( document.getElementById('radio3').checked) {
+        const area=arearombo(value2,value3)
+        const result=document.getElementById("idresrombo")
+        result.innerText=("El area del rombo es: "+area)
+        // alert('ooskss')
+    }else{
+        const peri=perirombo(value1)
+            const result2=document.getElementById("idresrombo")
+            result2.innerText=("El perimetro del rombo es: "+peri)
+    } 
 }
 
-
+function general_trapecio() {
+    const input1=document.getElementById("trap1")//busca el id para hacer referencia a ese id
+    const value1=Number( input1.value)
+    const input2=document.getElementById("trap2")//busca el id para hacer referencia a ese id
+    const value2=Number( input2.value)
+    const input3=document.getElementById("trap3")//busca el id para hacer referencia a ese id
+    const value3=Number( input3.value)
+    const input4=document.getElementById("trap4")//busca el id para hacer referencia a ese id
+    const value4=Number( input4.value)
+    const input5=document.getElementById("trap5")//busca el id para hacer referencia a ese id
+    const value5=Number( input5.value)
+    
+    if ( document.getElementById('radio5').checked) {
+        const area=areatrapecio(value3,value4,value5)
+        const result=document.getElementById("idtrapecio")
+        result.innerText=("El area del rombo es: "+area)
+        //  alert(area)
+    }else{
+        const peri=peritrapecio(value1,value2,value3,value4)
+            const result2=document.getElementById("idtrapecio")
+            result2.innerText=("El perimetro del rombo es: "+peri)
+    } 
+}
 //---------------------------------------------------------------------------------------------------------
 //funciones que retornan valores para usarlos en las otras funciones
 function perimetrocuadrado(lado) {
@@ -126,7 +108,6 @@ function areacuadrado(lado) {
     return lado*lado
 }
 function peritriangulo(lado1,lado2,base) {
-    // alert(typeof(lado1),lado2,base)
     return lado1+lado2+base 
 }
 function areatriangulo(base,altura) {
@@ -173,5 +154,38 @@ function mostrarseleccionado_triangulo() {
         document.getElementById("altura").disabled = true; 
         document.getElementById("btncalculaperi").disabled = false;
         document.getElementById("btncalculaarea").disabled = true;
+    }
+}
+
+function mostrar_seleccionado_rombo() {
+    if (document.getElementById('radio3').checked) {//los que se activan si o si a la primera
+        document.getElementById("rombo1").disabled = true;
+        if (document.getElementById("rombo2").disabled==true && 
+        document.getElementById("rombo3").disabled==true) {
+            document.getElementById("rombo2").disabled=false
+            document.getElementById("rombo3").disabled=false
+        }
+    }
+
+    if (document.getElementById('radio4').checked) {//los que se activan si o si a la primera
+        document.getElementById("rombo2").disabled = true;
+        document.getElementById("rombo3").disabled = true;
+        document.getElementById("rombo1").disabled = false;
+    }
+}
+
+function mostrar_activa_trapecio(params) {
+    if (document.getElementById('radio5').checked) {
+        document.getElementById("trap1").disabled = true;//lado1
+        document.getElementById("trap2").disabled = true;//lado2
+        if (document.getElementById("trap5").disabled = true) {
+            document.getElementById("trap5").disabled = false;
+        }
+    }
+    
+    if (document.getElementById('radio6').checked) {
+        document.getElementById("trap5").disabled = true;//altura
+        document.getElementById("trap1").disabled = false;//lado1
+        document.getElementById("trap2").disabled = false;//lado2
     }
 }

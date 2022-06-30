@@ -25,7 +25,8 @@
     width: 20%;
 }
 #descripcion_general{
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: normal;
 }
 .inputs{
     width: 70px;
@@ -38,4 +39,16 @@
 }
 .form_radio{
     margin: 3px;
+}
+h1{
+    font-size: 20px;
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: 30px;
+}
+h3{
+    color: black;
+    text-align: center;
 }

@@ -15,12 +15,14 @@
 	<div class="contenedor">
 		<header class="header">
 			<div class="nombre-uni">
-				<center><P>"Calculadora de areas y perimetros de las Figuras Geometricas"</P></center>
+				<center><P class="titulo">"Calculadora de areas y perímetros de las Figuras Geometricas"</P></center>
 			</div>
 		
 		</header>
         <div class="banner">
-              <h1 id="descripcion_general">Área: es la medida de la superficie de una figura; es decir, la medida de su región interior.</h1>  
+              <h1 class="descrip" id="descripcion_general">Área: es la medida de la superficie de una figura; es decir, la medida de su región interior. 
+				<br>
+				En geometría, el perímetro es la suma de todos los lados de una figura geometrica.</h1>  
         </div>
 		<!-- <div class="contiene_figuras"> -->
 			<div class="menu">
@@ -80,7 +82,7 @@
 						
 						<button type="button" class="botones" onclick="general_triangulos()" id="btncalculaarea">
 							<p class="parrafo">Calcular Area</p></button>
-						<button type="button" class="botones" onclick="perimetro_triangulo()" id="btncalculaperi"><p class="btnperimetro">Perimetro</p></button>
+						<button type="button" class="botones" onclick="general_triangulos()" id="btncalculaperi"><p class="btnperimetro">Perimetro</p></button>
 						<p>Resultado:</p>
 					</div>
 					<div class="muestra_res">
@@ -120,6 +122,11 @@
 					<div style="text-align: center">
 						<img src="img/rombo.png" alt="" width="30%" >
 					</div>
+					<div class="form_radio">					
+						<input type="radio" id="radio3" name="grupo1" onclick="mostrar_seleccionado_rombo()">Area
+						<input type="radio" id="radio4" name="grupo1" onclick="mostrar_seleccionado_rombo()">Perimetro						
+						<br>					
+					</div>
 					<!-- <br> -->
 					<label class="medida" for="rombo1">Ingrese el lado</label>
 					<div>
@@ -134,9 +141,9 @@
 						<input id="rombo3" type="number" class="inputs">
 					</div>
 					<div >
-						<button type="button" class="botones" onclick="area_rombo()">
+						<button type="button" class="botones" onclick="general_rombo()">
 							<p class="parrafo">Calcular Area</p></button>
-						<button type="button" class="botones" onclick="perimetro_cuadra()"><p class="btnperimetro">Perimetro</p></button>
+						<button type="button" class="botones" onclick="general_rombo()"><p class="btnperimetro">Perimetro</p></button>
 						<!-- <button ondblclick="esto es cuando se hace doble click"></button> -->
 						<p>Resultado:</p>
 					</div>
@@ -153,31 +160,40 @@
 					<div style="text-align: center">
 						<img src="img/trapecio.png" alt="" width="20%" >
 					</div>
+					<div class="form_radio">					
+						<input type="radio" id="radio5" name="grupo1" onclick="mostrar_activa_trapecio()">Area
+						<input type="radio" id="radio6" name="grupo1" onclick="mostrar_activa_trapecio()">Perimetro						
+						<br>					
+					</div>
 					<!-- <br> -->
-					<label class="medida" for="lado1">¿Cuanto mide el 1° lado?</label>
+					<label class="medida" for="trap1">¿Cuanto mide lado 1?</label>
 					<div>
-						<input id="lado1" type="number" class="inputs">
+						<input id="trap1" type="number" class="inputs">
 					</div>
-					<label class="medida" for="lado2">¿Cuanto mide el 2° lado?</label>
+					<label class="medida" for="trap2">¿Cuanto mide lado 2?</label>
 					<div>
-						<input id="lado2" type="number" class="inputs">
+						<input id="trap2" type="number" class="inputs">
 					</div>
-					<label class="medida" for="base">¿Cuanto mide la base?</label>
+					<label class="medida" for="trap3">Base Mayor</label>
 					<div>
-						<input id="base" type="number" class="inputs">
+						<input id="trap3" type="number" class="inputs">
 					</div>
-					<label class="medida" for="altura">¿Ingrese la altura?</label>
+					<label class="medida" for="trap4">Base menor</label>
 					<div>
-						<input id="altura" type="number" class="inputs">
+						<input id="trap4" type="number" class="inputs">
+					</div>
+					<label class="medida" for="trap5">Ingrese la altura</label>
+					<div>
+						<input id="trap5" type="number" class="inputs">
 					</div>
 					<div>
-						<button type="button" class="botones" onclick="area_triangulo()">
+						<button type="button" class="botones" onclick="general_trapecio()">
 							<p class="parrafo">Calcular Area</p></button>
-						<button type="button" class="botones" onclick="perimetro_triangulo()"><p class="btnperimetro">Perimetro</p></button>
+						<button type="button" class="botones" onclick="general_trapecio()"><p class="btnperimetro">Perimetro</p></button>
 						<p>Resultado:</p>
 					</div>
 					<div class="muestra_res">
-						<p id="idtriangulo"></p>
+						<p id="idtrapecio"></p>
 					</div>
 					
 				</form>
@@ -185,7 +201,7 @@
 		<!-- </div> -->
 		
 		<footer class="footer">
-			<h3>FOOTER</h3>
+			<h3>Pie de pagina</h3>
 			
 		</footer>
 	</div>
