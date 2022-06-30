@@ -1,0 +1,127 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #1A040D;
+	color: #000;
+	/* font-family: 'Roboto', sans-serif; */
+}
+.header{
+	font-family: 'Courier New', Courier, monospace;
+	grid-area: headder;
+	font-size: 20px;
+}
+.banner{
+	/* width: 100%; */
+	/* background-color: aqua; */
+	grid-area:banner;
+	/* height: 50px; */
+}
+.sidebar{
+	grid-area: sidebar;
+}
+.menu{
+	background-color: #000;
+	grid-area: menu;
+	/* height: 500px; */
+	/* border: 3px solid black; */
+}
+
+.menu, .contenido,.sidebar,.figura_rombo,.figura_trapecio{
+	height: 370px;
+	border: 3px solid black;
+	text-align: center;
+}
+.contenedor {
+	width: 70%;
+	max-width: 1400px;
+	margin: 20px auto;
+	/* padding: 10px 10px; */
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, auto);
+
+	grid-template-areas: 
+						"header header header  "
+						"banner banner banner "
+						"menu contenido sidebar  "						 
+						"figura_rombo figura_trapecio hola "						 
+						 "footer footer footer ";
+}
+
+.contenedor .contenido,
+.contenedor .menu,
+.contenedor .sidebar,
+.contenedor .footer ,
+.contenedor .banner,
+.contenedor .mapa,
+.contenedor .header,
+.contenedor .figura_rombo,
+.contenedor .figura_trapecio
+{
+	background: #bc86fa;
+	padding: 20px;
+	border-radius: 10px;
+}
+.figura_rombo{
+	grid-area: figura_rombo;
+}
+.figura_trapecio{
+	grid-area:figura_trapecio
+}
+.contenedor .header {
+	background: #19e6d4;
+	color: #000;/*color letra*/
+	grid-area: header;
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+	/* height: 500px; */
+}
+
+.contenedor .sidebar ,.menu,.contenido,.banner,.figura_rombo,.figura_trapecio{
+
+	/* text-align: center; */
+	font-family: 'Courier New', Courier, monospace;
+
+}
+
+/* .contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+
+.contenedor .footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: 
+						"header header header  "
+						"banner banner banner "
+						"menu menu menu  "						 
+						"contenido contenido contenido  "						 
+						"sidebar sidebar sidebar "
+						"figura_rombo figura_rombo figura_rombo"	
+						"figura_trapecio figura_trapecio figura_trapecio"					 
+						"footer footer footer ";
+	}
+	.menu, .contenido,.sidebar,.figura_rombo,.figura_trapecio{
+		height: 390px;
+		border: 3px solid black;
+		text-align: center;
+	}
+} 

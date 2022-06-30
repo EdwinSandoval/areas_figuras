@@ -1,0 +1,41 @@
+.medida{
+    /* border: 1px solid black; */
+    /* border-radius: 5%; */
+    font-family: 'Courier New', Courier, monospace;
+}
+.muestra_res{
+    border: 1px solid black;
+    height: 40px;
+}
+/* #txtingresa{
+} */
+.botones{
+    margin: 10px;
+    /* border-radius: 10%; */
+    border: 1px solid black;
+    /* padding: auto; */
+}
+.botones:hover{
+    visibility: visible;
+    opacity: 1;
+  background: #2effcb;
+}
+
+#imagen{
+    width: 20%;
+}
+#descripcion_general{
+    font-size: 20px;
+}
+.inputs{
+    width: 70px;
+}
+.parrafo{
+    margin: 3px;
+}
+.btnperimetro{
+    margin: 3px;
+}
+.form_radio{
+    margin: 3px;
+}

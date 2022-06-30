@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="styles/estilos.css">
+	<link rel="stylesheet" href="styles/estilos_internos.css">
+	<!-- <link rel="stylesheet" href="estilos2.css"> -->
+	<title>Areas y perimetros de figuras Geometricas</title>
+</head>
+<body>
+	<script src="metodos.js"></script>
+	<div class="contenedor">
+		<header class="header">
+			<div class="nombre-uni">
+				<center><P>"Calculadora de areas y perimetros de las Figuras Geometricas"</P></center>
+			</div>
+		
+		</header>
+        <div class="banner">
+              <h1 id="descripcion_general">Área: es la medida de la superficie de una figura; es decir, la medida de su región interior.</h1>  
+        </div>
+		<!-- <div class="contiene_figuras"> -->
+			<div class="menu">
+				<h1>Cuadrado</h1>
+				<form action="">
+					<div style="text-align: center">
+						<img src="img/cuadrado.png" alt="" id="imagen" >
+					</div>
+					<!-- <br> -->
+					<label class="medida" for="cuadrado">¿Cuanto mide el lado?</label>
+					<div>
+						<input id="cuadrado" type="number" class="inputs">
+					</div>
+					<div >
+						
+						<button type="button" class="botones" onclick="area_cuadra()">
+							<p class="parrafo">Calcular Area</p></button>
+						<button type="button" class="botones" onclick="perimetro_cuadra()"><p class="btnperimetro">Perimetro</p></button>
+						<!-- <button ondblclick="esto es cuando se hace doble click"></button> -->
+						<p>Resultado:</p>
+					</div>
+					<div class="muestra_res">
+						<p id="idarea2"></p>
+					</div>
+					
+				</form>
+			</div>
+			<div class="contenido">
+				<h1>Triangulo</h1>
+				<form action="">
+					<div style="text-align: center">
+						<img src="img/triangulo.png" alt="" id="imagen">
+					</div>
+					<div class="form_radio">					
+						<input type="radio" id="radio1" name="grupo1" onclick="mostrarseleccionado_triangulo()">Area
+						<input type="radio" id="radio2" name="grupo1" onclick="mostrarseleccionado_triangulo()">Perimetro						
+						<br>					
+					</div>
+					<!-- <br> -->
+					<label class="medida" for="lado1">¿Cuanto mide el 1° lado?</label>
+					<div>
+						<input id="lado1" type="number" class="inputs">
+					</div>
+					<label class="medida" for="lado2">¿Cuanto mide el 2° lado?</label>
+					<div>
+						<input id="lado2" type="number" class="inputs">
+					</div>
+					<label class="medida" for="base">¿Cuanto mide la base?</label>
+					<div>
+						<input id="base" type="number" class="inputs">
+					</div>
+					<label class="medida" for="altura">¿Ingrese la altura?</label>
+					<div>
+						<input id="altura" type="number" class="inputs">
+					</div>
+					<div>
+						
+						<button type="button" class="botones" onclick="general_triangulos()" id="btncalculaarea">
+							<p class="parrafo">Calcular Area</p></button>
+						<button type="button" class="botones" onclick="perimetro_triangulo()" id="btncalculaperi"><p class="btnperimetro">Perimetro</p></button>
+						<p>Resultado:</p>
+					</div>
+					<div class="muestra_res">
+						<p id="idtriangulo"></p>
+					</div>
+					
+				</form>
+			</div>
+			<div class="sidebar">
+				<h1>Circulo</h1>
+				<form action="">
+					<div style="text-align: center">
+						<img id="imagen" src="img/circulo.png" alt=""  >
+					</div>
+					<!-- <br> -->
+					<label class="medida" for="circulo">¿Cuanto mide el radio?</label>
+					<div>
+						<input id="circulo" type="number" class="inputs" >
+					</div>
+					<div>
+						<button type="button" class="botones" onclick="area_circulo()">
+							<p class="parrafo">Calcular Area</p></button>
+						<button type="button" class="botones" onclick="peri_circulo()"><p class="btnperimetro">Perimetro</p></button>
+						<p>Resultado:</p>
+					</div>
+					<div class="muestra_res">
+						<p id="idcirculo"></p>
+					</div>
+					
+				</form>
+			</div>
+
+
+			<div class="figura_rombo">
+				<h1>Rombo</h1>
+				<form action="">
+					<div style="text-align: center">
+						<img src="img/rombo.png" alt="" width="30%" >
+					</div>
+					<!-- <br> -->
+					<label class="medida" for="rombo1">Ingrese el lado</label>
+					<div>
+						<input id="rombo1" type="number" class="inputs">
+					</div>
+					<label class="medida" for="rombo2">¿Cuanto mide Diag mayor?</label>
+					<div>
+						<input id="rombo2" type="number" class="inputs">
+					</div>
+					<label class="medida" for="rombo3">¿Cuanto mide Diag menor?</label>
+					<div>
+						<input id="rombo3" type="number" class="inputs">
+					</div>
+					<div >
+						<button type="button" class="botones" onclick="area_rombo()">
+							<p class="parrafo">Calcular Area</p></button>
+						<button type="button" class="botones" onclick="perimetro_cuadra()"><p class="btnperimetro">Perimetro</p></button>
+						<!-- <button ondblclick="esto es cuando se hace doble click"></button> -->
+						<p>Resultado:</p>
+					</div>
+					<div class="muestra_res">
+						<p id="idresrombo"></p>
+					</div>
+					
+				</form>
+			</div>
+			
+			<div class="figura_trapecio">
+				<h1>Trapecio</h1>
+				<form action="">
+					<div style="text-align: center">
+						<img src="img/trapecio.png" alt="" width="20%" >
+					</div>
+					<!-- <br> -->
+					<label class="medida" for="lado1">¿Cuanto mide el 1° lado?</label>
+					<div>
+						<input id="lado1" type="number" class="inputs">
+					</div>
+					<label class="medida" for="lado2">¿Cuanto mide el 2° lado?</label>
+					<div>
+						<input id="lado2" type="number" class="inputs">
+					</div>
+					<label class="medida" for="base">¿Cuanto mide la base?</label>
+					<div>
+						<input id="base" type="number" class="inputs">
+					</div>
+					<label class="medida" for="altura">¿Ingrese la altura?</label>
+					<div>
+						<input id="altura" type="number" class="inputs">
+					</div>
+					<div>
+						<button type="button" class="botones" onclick="area_triangulo()">
+							<p class="parrafo">Calcular Area</p></button>
+						<button type="button" class="botones" onclick="perimetro_triangulo()"><p class="btnperimetro">Perimetro</p></button>
+						<p>Resultado:</p>
+					</div>
+					<div class="muestra_res">
+						<p id="idtriangulo"></p>
+					</div>
+					
+				</form>
+			</div>
+		<!-- </div> -->
+		
+		<footer class="footer">
+			<h3>FOOTER</h3>
+			
+		</footer>
+	</div>
+</body>
+</html>
