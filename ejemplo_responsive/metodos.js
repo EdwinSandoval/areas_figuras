@@ -99,6 +99,24 @@ function general_trapecio() {
             result2.innerText=("El perimetro del rombo es: "+peri)
     } 
 }
+
+function area_cubo() {
+    const input=document.getElementById("cubo")//busca el id para hacer referencia a ese id
+    const value=input.value
+    const area=areacubo(value)
+    
+    const result=document.getElementById("idcubo")
+    result.innerText=("El area del cubo es: "+area)
+}
+function vol_cubo() {
+    const input=document.getElementById("cubo")//busca el id para hacer referencia a ese id
+    const value=input.value
+    const area=volumencubo(value)
+    
+    const result=document.getElementById("idcubo")
+    result.innerText=("El volumen del cubo es: "+area)
+}
+
 //---------------------------------------------------------------------------------------------------------
 //funciones que retornan valores para usarlos en las otras funciones
 function perimetrocuadrado(lado) {
@@ -132,6 +150,12 @@ function areatrapecio(B,b,altura) {
 }
 function peritrapecio(lado1,lado2,lado3,lado4) {
     return lado1+lado2+lado3+lado4
+}
+function areacubo(lado) {
+    return 6*Math.pow(lado,2)
+}
+function volumencubo(lado) {
+    return Math.pow(lado,3)
 }
 
 function mostrarseleccionado_triangulo() {
@@ -189,3 +213,4 @@ function mostrar_activa_trapecio(params) {
         document.getElementById("trap2").disabled = false;//lado2
     }
 }
+
